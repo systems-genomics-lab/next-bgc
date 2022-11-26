@@ -1,2 +1,2 @@
-# next-bgc
+# Next BGC
 Nextflow BGC pipeline
