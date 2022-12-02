@@ -8,7 +8,7 @@ process INFO {
   """
   echo "Accession: "'${params.accession}'
   date
-  kraken2
+  /apps/kraken2/bin/kraken2
   """
 }
 
