@@ -8,6 +8,7 @@ process INFO {
   """
   echo "Accession: "'${params.accession}'
   date
+  deepbpc info
   """
 }
 
