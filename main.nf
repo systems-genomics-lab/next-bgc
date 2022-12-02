@@ -1,6 +1,8 @@
 params.accession = 'xxx'
 
 process INFO {
+  process.container = 'ghcr.io/systems-genomics-lab/bgc-engine'
+  docker.enabled = true
   output:
   stdout
     
@@ -18,8 +20,4 @@ process INFO {
  */
 workflow {
   INFO()
-}
-
-docker {
-    enabled = true
 }
