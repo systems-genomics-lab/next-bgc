@@ -8,8 +8,6 @@ process INFO {
   """
   echo "Accession: "'${params.accession}'
   date
-  deepbgc --version
-  deepbgc info
   """
 }
 
