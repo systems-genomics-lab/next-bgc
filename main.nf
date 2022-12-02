@@ -19,3 +19,7 @@ process INFO {
 workflow {
   INFO()
 }
+
+docker {
+    enabled = true
+}
