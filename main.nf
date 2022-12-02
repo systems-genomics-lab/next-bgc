@@ -8,7 +8,7 @@ process INFO {
   """
   echo "Accession: "'${params.accession}'
   date
-  deepbgc info
+  kraken2
   """
 }
 
