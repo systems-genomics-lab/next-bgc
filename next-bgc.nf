@@ -19,3 +19,14 @@ process INFO {
 workflow {
   INFO()
 }
+
+
+process VERSION {
+  output:
+  stdout
+    
+  script:
+  """
+  kraken2 --version
+  """
+}
