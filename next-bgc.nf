@@ -1,32 +1,9 @@
 params.accession = 'xxx'
 
-process INFO {
-  output:
-  stdout
-    
-  script:
-  """
-  echo "Accession: "'${params.accession}'
-  date
-  deepbgc info
-  """
-}
-
-
-process VERSION {
-  output:
-  stdout
-    
-  script:
-  """
-  kraken2 --version
-  """
-}
-
-/**
+/*
   Downlodas FASTQ from NCBI's SRA
 */
-process Download {
+process FASTQ_DUMP {
   output:
   stdout
     
@@ -38,10 +15,9 @@ process Download {
   """
 }
 
-
 /*
  * Define the workflow
  */
 workflow {
-  Download()
+  FASTQ_DUMP()
 }
