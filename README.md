@@ -2,7 +2,13 @@
 Nextflow BGC pipeline
 
 
-## To run
-```bash11
-sudo nextflow run systems-genomics-lab/next-bgc -r main --accession xyz
+- To retrieve the latest version:
+
+```bash
+nextflow pull systems-genomics-lab/next-bgc
+```
+
+- To run:
+```bash
+nextflow run systems-genomics-lab/next-bgc -r main --accession xyz
 ```
