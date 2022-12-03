@@ -1,9 +1,12 @@
-params.accession = 'xxx'
+# params.accession = 'xxx'
 
 /*
   Downlodas FASTQ from NCBI's SRA
 */
 process FASTQ_DUMP {
+  input:
+  val accession
+  
   output:
   stdout
     
@@ -11,7 +14,7 @@ process FASTQ_DUMP {
   """
   prefetch '${params.accession}'
   cd '${params.accession}'
-  fastq-dump --split-files --split-spot --skip-technical --gzip '${params.accession}'
+  fastq-dump --split-files --split-spot --skip-technical --gzip '${accession}'
   """
 }
 
@@ -19,5 +22,5 @@ process FASTQ_DUMP {
  * Define the workflow
  */
 workflow {
-  FASTQ_DUMP()
+  Channel.of('SRR6145058', 'SRR6145059') | FASTQ_DUMP
 }
