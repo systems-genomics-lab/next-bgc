@@ -12,8 +12,8 @@ process FASTQ_DUMP {
     
   script:
   """
-  prefetch '${params.accession}'
-  cd '${params.accession}'
+  prefetch '${accession}'
+  cd '${accession}'
   fastq-dump --split-files --split-spot --skip-technical --gzip '${accession}'
   """
 }
