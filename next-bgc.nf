@@ -13,14 +13,6 @@ process INFO {
 }
 
 
-/*
- * Define the workflow
- */
-workflow {
-  INFO()
-}
-
-
 process VERSION {
   output:
   stdout
@@ -29,4 +21,13 @@ process VERSION {
   """
   kraken2 --version
   """
+}
+
+
+/*
+ * Define the workflow
+ */
+workflow {
+  INFO()
+  VERSION()
 }
