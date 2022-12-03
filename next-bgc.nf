@@ -1,4 +1,4 @@
-# params.accession = 'xxx'
+params.accession = 'xxx'
 
 /*
   Downlodas FASTQ from NCBI's SRA
