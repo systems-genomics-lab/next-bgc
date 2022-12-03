@@ -23,11 +23,19 @@ process VERSION {
   """
 }
 
+/**
+  Downlodas FASTQ from NCBI's SRA
+*/
+process Download {
+  prefetch '${params.accession}'
+  cd '${params.accession}'
+  fastq-dump --split-files --split-spot --skip-technical --gzip '${params.accession}'
+}
+
 
 /*
  * Define the workflow
  */
 workflow {
-  INFO()
-  VERSION()
+  Download
 }
