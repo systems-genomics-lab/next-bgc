@@ -43,5 +43,5 @@ process Download {
  * Define the workflow
  */
 workflow {
-  Download
+  Download()
 }
